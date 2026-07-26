@@ -12,7 +12,7 @@ const dictionaries = {
     "hero.title.1": "Seu servidor.",
     "hero.title.2": "Sua música. Sua IA.",
     "hero.subtitle":
-      'Música do YouTube com visual de app, inteligência artificial local no chat e comandos de voz estilo Alexa — "hey jarvis, toca..."',
+      'Música do YouTube com visual de app, inteligência artificial local no chat e comandos de voz — "hey jarvis, toca..."',
     "hero.cta.add": "Adicionar ao Discord",
     "hero.cta.how": "Como funciona",
     "features.title": "Um bot, três superpoderes",
@@ -24,7 +24,7 @@ const dictionaries = {
     "features.ai.title": "IA no chat",
     "features.ai.desc":
       "/jarvis conversa usando um LLM rodando na SUA máquina. Zero nuvem, zero custo por pergunta.",
-    "features.voice.title": "Voz estilo Alexa",
+    "features.voice.title": "Comandos de voz",
     "features.voice.desc":
       '"hey jarvis, toca..." — wake word local, transcrição whisper e intenção resolvida por IA.',
     "features.private.title": "Privado por design",
@@ -75,7 +75,7 @@ const dictionaries = {
     "hero.title.1": "Your server.",
     "hero.title.2": "Your music. Your AI.",
     "hero.subtitle":
-      'App-grade YouTube music, local AI in chat, and Alexa-style voice commands — "hey jarvis, play..."',
+      'App-grade YouTube music, local AI in chat, and voice commands — "hey jarvis, play..."',
     "hero.cta.add": "Add to Discord",
     "hero.cta.how": "How it works",
     "features.title": "One bot, three superpowers",
@@ -87,7 +87,7 @@ const dictionaries = {
     "features.ai.title": "AI in chat",
     "features.ai.desc":
       "/jarvis chats using an LLM running on YOUR machine. Zero cloud, zero cost per question.",
-    "features.voice.title": "Alexa-style voice",
+    "features.voice.title": "Voice commands",
     "features.voice.desc":
       '"hey jarvis, play..." — local wake word, whisper transcription, AI-resolved intent.',
     "features.private.title": "Private by design",
