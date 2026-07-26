@@ -1,6 +1,11 @@
+import { Commands } from "@/components/site/commands";
+import { Features } from "@/components/site/features";
+import { Footer } from "@/components/site/footer";
 import { Hero } from "@/components/site/hero";
 import { Install } from "@/components/site/install";
 import { LanguageToggle } from "@/components/site/language-toggle";
+import { PlayerShowcase } from "@/components/site/player-showcase";
+import { Voice } from "@/components/site/voice";
 
 export default function Home() {
   return (
@@ -9,7 +14,12 @@ export default function Home() {
         <LanguageToggle />
       </header>
       <Hero />
+      <Features />
+      <PlayerShowcase />
+      <Voice />
+      <Commands />
       <Install />
+      <Footer />
     </main>
   );
 }
