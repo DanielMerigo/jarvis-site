@@ -8,7 +8,7 @@ const dictionaries = {
   pt: {
     "nav.commands": "Comandos",
     "nav.install": "Instalar",
-    "hero.badge": "Bot de Discord · Música + IA + Voz",
+    "hero.badge": "Bot de Discord · Música + IA + Voz · PT/EN",
     "hero.title.1": "Seu servidor.",
     "hero.title.2": "Sua música. Sua IA.",
     "hero.subtitle":
@@ -27,6 +27,9 @@ const dictionaries = {
     "features.voice.title": "Comandos de voz",
     "features.voice.desc":
       '"hey jarvis, toca..." — wake word local, transcrição whisper e intenção resolvida por IA.',
+    "features.bilingual.title": "Bilíngue de verdade",
+    "features.bilingual.desc":
+      '"Toca" ou "play", tanto faz: voz, comandos e IA entendem português e inglês.',
     "features.private.title": "Privado por design",
     "features.private.desc":
       "Self-hosted: o áudio, a IA e os seus dados nunca saem do seu computador.",
@@ -87,7 +90,7 @@ const dictionaries = {
   en: {
     "nav.commands": "Commands",
     "nav.install": "Install",
-    "hero.badge": "Discord Bot · Music + AI + Voice",
+    "hero.badge": "Discord Bot · Music + AI + Voice · PT/EN",
     "hero.title.1": "Your server.",
     "hero.title.2": "Your music. Your AI.",
     "hero.subtitle":
@@ -106,6 +109,9 @@ const dictionaries = {
     "features.voice.title": "Voice commands",
     "features.voice.desc":
       '"hey jarvis, play..." — local wake word, whisper transcription, AI-resolved intent.',
+    "features.bilingual.title": "Truly bilingual",
+    "features.bilingual.desc":
+      '"Toca" or "play", either works: voice, commands, and AI understand Portuguese and English.',
     "features.private.title": "Private by design",
     "features.private.desc":
       "Self-hosted: your audio, your AI, and your data never leave your computer.",

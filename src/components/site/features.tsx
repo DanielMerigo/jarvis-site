@@ -32,11 +32,18 @@ const features: Array<{
     span: "",
   },
   {
+    titleKey: "features.bilingual.title",
+    descKey: "features.bilingual.desc",
+    icon: "🌎",
+    accent: "from-amber-400/20",
+    span: "",
+  },
+  {
     titleKey: "features.private.title",
     descKey: "features.private.desc",
     icon: "🔒",
     accent: "from-emerald-400/20",
-    span: "sm:col-span-2",
+    span: "",
   },
 ];
 
