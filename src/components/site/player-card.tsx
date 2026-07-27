@@ -1,7 +1,6 @@
 "use client";
 
-/* eslint-disable @next/next/no-img-element */
-
+import Image from "next/image";
 import { motion, useReducedMotion } from "motion/react";
 
 const controls = [
@@ -71,7 +70,7 @@ export function PlayerCard() {
               key={control.label}
               className={`flex cursor-default items-center gap-1.5 rounded-md px-2.5 py-1.5 text-xs font-medium text-white transition-colors ${buttonStyles[control.style]}`}
             >
-              <img src={`/emojis/${control.icon}.png`} alt="" width={18} height={18} />
+              <Image src={`/emojis/${control.icon}.png`} alt="" width={18} height={18} />
               {control.label}
             </span>
           ))}
@@ -82,7 +81,7 @@ export function PlayerCard() {
               key={control.label}
               className="flex cursor-default items-center gap-1.5 rounded-md bg-[#4e5058] px-2.5 py-1.5 text-xs font-medium text-white"
             >
-              <img src={`/emojis/${control.icon}.png`} alt="" width={18} height={18} />
+              <Image src={`/emojis/${control.icon}.png`} alt="" width={18} height={18} />
               {control.label}
             </span>
           ))}
