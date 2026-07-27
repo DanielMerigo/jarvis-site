@@ -141,7 +141,15 @@ export function Voice() {
           <h3 className="font-display text-2xl font-bold text-white sm:text-3xl">
             {t("voice.how.title")}
           </h3>
-          <p className="mt-2 text-slate-400">{t("voice.how.subtitle")}</p>
+          <div className="mx-auto mt-4 flex max-w-fit flex-wrap items-center justify-center gap-x-2 gap-y-1 rounded-full border border-cyan-400/20 bg-cyan-400/5 px-5 py-2.5 text-sm text-slate-300">
+            <span>{t("voice.how.join.lead")}</span>
+            <code className="rounded bg-slate-800/80 px-1.5 py-0.5 font-mono text-cyan-300">/join</code>
+            <span>{t("voice.how.join.a")}</span>
+            <span className="text-slate-600">·</span>
+            <code className="rounded bg-slate-800/80 px-1.5 py-0.5 font-mono text-cyan-300">/leave</code>
+            <span>{t("voice.how.join.b")}</span>
+          </div>
+          <p className="mt-4 text-slate-400">{t("voice.how.subtitle")}</p>
         </motion.div>
 
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

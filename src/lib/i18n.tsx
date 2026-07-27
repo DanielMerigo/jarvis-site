@@ -49,6 +49,9 @@ const dictionaries = {
     "voice.s4.desc": "o player executa: toca, pula, pausa, volume",
     "voice.how.title": "Como falar com ele",
     "voice.how.subtitle": "Quatro hábitos para acertar de primeira:",
+    "voice.how.join.lead": "Antes de tudo:",
+    "voice.how.join.a": "traz o Ears para o seu canal de voz e começa a ouvir",
+    "voice.how.join.b": "encerra a escuta",
     "voice.how.t1.title": "Emende o chamado",
     "voice.how.t1.desc":
       '"hey jarvis" rápido, como uma palavra só — devagar e articulado piora a detecção.',
@@ -125,6 +128,9 @@ const dictionaries = {
     "voice.s4.desc": "the player executes: play, skip, pause, volume",
     "voice.how.title": "How to talk to it",
     "voice.how.subtitle": "Four habits to nail it on the first try:",
+    "voice.how.join.lead": "First things first:",
+    "voice.how.join.a": "brings Ears into your voice channel and starts listening",
+    "voice.how.join.b": "stops it",
     "voice.how.t1.title": "Run the call together",
     "voice.how.t1.desc":
       '"hey jarvis" fast, like a single word — slow and over-articulated hurts detection.',
