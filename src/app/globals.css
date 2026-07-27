@@ -3,6 +3,12 @@
 @import "shadcn/tailwind.css";
 
 @custom-variant dark (&:is(.dark *));
+/* The site is designed dark-first: unprefixed classes ARE the dark look, and
+   light mode opts in via `light:` overrides (html without .dark).
+   `:where()` around the utility class keeps the base selector at zero
+   specificity while `html:not(.dark)` adds its own, so a `light:` utility
+   always beats its unprefixed counterpart regardless of source order. */
+@custom-variant light (html:not(.dark) &:where(*));
 
 @theme inline {
   --color-background: var(--background);
@@ -188,8 +194,24 @@
   }
   html {
     @apply font-mono;
+    /* Native UI (scrollbars, form controls) follows the active theme */
+    color-scheme: light;
+  }
+  html.dark {
+    color-scheme: dark;
+  }
+  /* Soften the theme switch on the page backdrop. Deliberately NOT applied to
+     `body *`: a blanket transition there would override the `transition-all`
+     hover effects the UI components define for themselves. */
+  @media (prefers-reduced-motion: no-preference) {
+    body {
+      transition:
+        background-color 0.35s ease,
+        color 0.35s ease;
+    }
   }
 }
+
 @theme inline {
   --font-display: var(--font-display);
 }

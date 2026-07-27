@@ -18,10 +18,10 @@ export function PlayerShowcase() {
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="font-display text-3xl font-bold text-white sm:text-5xl">
+          <h2 className="font-display text-3xl font-bold text-white light:text-slate-900 sm:text-5xl">
             {t("player.title")}
           </h2>
-          <p className="mt-4 max-w-xl text-slate-400">{t("player.subtitle")}</p>
+          <p className="mt-4 max-w-xl text-slate-400 light:text-slate-600">{t("player.subtitle")}</p>
           <ul className="mt-8 space-y-4">
             {bullets.map((key, index) => (
               <motion.li
@@ -30,9 +30,9 @@ export function PlayerShowcase() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.15 + index * 0.1 }}
-                className="flex items-start gap-3 text-sm text-slate-300"
+                className="flex items-start gap-3 text-sm text-slate-300 light:text-slate-700"
               >
-                <span className="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-cyan-400/15 text-[11px] text-cyan-300">
+                <span className="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-cyan-400/15 text-[11px] text-cyan-300 light:bg-cyan-600/15 light:text-cyan-700">
                   ✓
                 </span>
                 {t(key)}

@@ -8,6 +8,8 @@ const dictionaries = {
   pt: {
     "nav.commands": "Comandos",
     "nav.install": "Instalar",
+    "theme.toLight": "Mudar para o tema claro",
+    "theme.toDark": "Mudar para o tema escuro",
     "hero.badge": "Bot de Discord · Música + IA + Voz · PT/EN",
     "hero.title.1": "Seu servidor.",
     "hero.title.2": "Sua música. Sua IA.",
@@ -90,6 +92,8 @@ const dictionaries = {
   en: {
     "nav.commands": "Commands",
     "nav.install": "Install",
+    "theme.toLight": "Switch to the light theme",
+    "theme.toDark": "Switch to the dark theme",
     "hero.badge": "Discord Bot · Music + AI + Voice · PT/EN",
     "hero.title.1": "Your server.",
     "hero.title.2": "Your music. Your AI.",

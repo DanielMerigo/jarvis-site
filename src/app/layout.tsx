@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { LanguageProvider } from "@/lib/i18n";
+import { THEME_INIT_SCRIPT, ThemeProvider } from "@/lib/theme";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,8 +32,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    // suppressHydrationWarning: the inline script below may remove the `dark`
+    // class before hydration when the visitor saved the light theme.
     <html
       lang="pt"
+      suppressHydrationWarning
       className={cn(
         "dark h-full scroll-smooth antialiased",
         geistSans.variable,
@@ -40,8 +44,11 @@ export default function RootLayout({
         spaceGrotesk.variable,
       )}
     >
-      <body className="min-h-full bg-[#04070d] font-sans text-slate-100">
-        <LanguageProvider>{children}</LanguageProvider>
+      <body className="min-h-full bg-[#04070d] font-sans text-slate-100 light:bg-[#f5f9fc] light:text-slate-800">
+        <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
+        <ThemeProvider>
+          <LanguageProvider>{children}</LanguageProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
