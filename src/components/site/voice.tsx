@@ -7,7 +7,7 @@ import { useI18n, type TranslationKey } from "@/lib/i18n";
 const steps: Array<{ titleKey: TranslationKey; descKey: TranslationKey; icon: string }> = [
   { titleKey: "voice.s1.title", descKey: "voice.s1.desc", icon: "👂" },
   { titleKey: "voice.s2.title", descKey: "voice.s2.desc", icon: "📝" },
-  { titleKey: "voice.s3.title", descKey: "voice.s3.desc", icon: "🧠" },
+  { titleKey: "voice.s3.title", descKey: "voice.s3.desc", icon: "🎯" },
   { titleKey: "voice.s4.title", descKey: "voice.s4.desc", icon: "🎵" },
 ];
 

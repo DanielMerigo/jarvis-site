@@ -7,7 +7,6 @@ const stack = [
   "discord-player",
   "yt-dlp",
   "ffmpeg",
-  "llama.cpp",
   "whisper.cpp",
   "openWakeWord",
 ];

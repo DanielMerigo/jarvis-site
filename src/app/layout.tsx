@@ -20,9 +20,9 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Jarvis — Discord Music, AI & Voice Bot",
+  title: "Jarvis — Discord Music & Voice Bot",
   description:
-    'YouTube music with app-grade cards, local AI in chat, and voice commands: "hey jarvis, play..."',
+    'YouTube music with app-grade cards, a shared queue, and voice commands: "hey jarvis, play..."',
 };
 
 export default function RootLayout({

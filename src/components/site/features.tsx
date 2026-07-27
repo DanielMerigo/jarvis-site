@@ -18,9 +18,9 @@ const features: Array<{
     span: "sm:col-span-2",
   },
   {
-    titleKey: "features.ai.title",
-    descKey: "features.ai.desc",
-    icon: "🧠",
+    titleKey: "features.queue.title",
+    descKey: "features.queue.desc",
+    icon: "📋",
     accent: "from-violet-400/20",
     span: "",
   },

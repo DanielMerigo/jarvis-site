@@ -13,7 +13,6 @@ const slashCommands = [
   "/queue",
   "/volume 80",
   "/nowplaying",
-  "/jarvis message",
   "/join",
   "/leave",
   "/help",

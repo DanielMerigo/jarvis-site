@@ -5,6 +5,7 @@ import { Hero } from "@/components/site/hero";
 import { Install } from "@/components/site/install";
 import { LanguageToggle } from "@/components/site/language-toggle";
 import { PlayerShowcase } from "@/components/site/player-showcase";
+import { Queue } from "@/components/site/queue";
 import { Voice } from "@/components/site/voice";
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
       <Hero />
       <Features />
       <PlayerShowcase />
+      <Queue />
       <Voice />
       <Commands />
       <Install />
