@@ -84,6 +84,9 @@ const dictionaries = {
     "install.ears.cta": "Convidar o Ears",
     "install.note":
       "O Ears é opcional — sem ele, tudo funciona normalmente, menos os comandos de voz.",
+    // The acronym itself is rendered inline in the footer (letters highlighted);
+    // only the translation line is language-dependent.
+    "footer.acronym.translation": "“Apenas um sistema bastante inteligente”",
     "footer.tagline":
       "Mordomo digital de servidor — música, IA e voz rodando na sua própria máquina.",
     "footer.stack": "Construído com",
@@ -167,6 +170,8 @@ const dictionaries = {
       'Enables voice commands: "hey jarvis, play...", "next song", "turn it down".',
     "install.ears.cta": "Invite Ears",
     "install.note": "Ears is optional — without it everything works, except voice commands.",
+    // English readers get the acronym itself, no translation line needed.
+    "footer.acronym.translation": "",
     "footer.tagline":
       "A digital butler for your server — music, AI, and voice running on your own machine.",
     "footer.stack": "Built with",

@@ -49,11 +49,17 @@ export function Hero() {
             "absolute inset-0 fill-cyan-400/10 stroke-cyan-400/10 light:fill-cyan-600/15 light:stroke-cyan-600/15",
           )}
         />
+        {/* The mouse-follow is the point of this layer, so it has to READ as
+            interactive: low staticity = particles drift further toward the
+            cursor, low ease = they get there quickly. The defaults (50/50)
+            move them a few pixels over a second — invisible in practice. */}
         <Particles
           className="absolute inset-0"
-          quantity={90}
+          quantity={140}
+          size={0.5}
+          staticity={18}
+          ease={22}
           color={theme === "dark" ? "#22d3ee" : "#0e7490"}
-          ease={80}
         />
       </motion.div>
 

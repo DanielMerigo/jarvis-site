@@ -18,7 +18,25 @@ export function Footer() {
   return (
     <footer className="border-t border-slate-800/70 px-6 py-14 light:border-slate-200">
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 text-center">
-        <p className="font-display text-lg font-semibold text-white light:text-slate-900">J.A.R.V.I.S.</p>
+        <div className="flex flex-col items-center gap-1.5">
+          <p className="font-display text-lg font-semibold text-white light:text-slate-900">
+            J.A.R.V.I.S.
+          </p>
+          {/* Marvel's original expansion, spelled out so the initials land */}
+          <p className="text-sm text-slate-300 light:text-slate-700">
+            <span className="font-semibold text-cyan-300 light:text-cyan-700">J</span>ust{" "}
+            <span className="font-semibold text-cyan-300 light:text-cyan-700">A</span>{" "}
+            <span className="font-semibold text-cyan-300 light:text-cyan-700">R</span>ather{" "}
+            <span className="font-semibold text-cyan-300 light:text-cyan-700">V</span>ery{" "}
+            <span className="font-semibold text-cyan-300 light:text-cyan-700">I</span>ntelligent{" "}
+            <span className="font-semibold text-cyan-300 light:text-cyan-700">S</span>ystem
+          </p>
+          {t("footer.acronym.translation") && (
+            <p className="text-xs italic text-slate-500 light:text-slate-500">
+              {t("footer.acronym.translation")}
+            </p>
+          )}
+        </div>
         <p className="max-w-md text-sm text-slate-400 light:text-slate-600">{t("footer.tagline")}</p>
         <div className="flex flex-wrap items-center justify-center gap-2">
           <span className="text-xs uppercase tracking-wider text-slate-600 light:text-slate-500">
