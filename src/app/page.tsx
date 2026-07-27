@@ -5,14 +5,12 @@ import { Hero } from "@/components/site/hero";
 import { Install } from "@/components/site/install";
 import { LanguageToggle } from "@/components/site/language-toggle";
 import { PlayerShowcase } from "@/components/site/player-showcase";
-import { ThemeToggle } from "@/components/site/theme-toggle";
 import { Voice } from "@/components/site/voice";
 
 export default function Home() {
   return (
     <main className="relative">
-      <header className="fixed right-4 top-4 z-50 flex items-center gap-2 sm:right-6 sm:top-6">
-        <ThemeToggle />
+      <header className="fixed right-4 top-4 z-50 sm:right-6 sm:top-6">
         <LanguageToggle />
       </header>
       <Hero />

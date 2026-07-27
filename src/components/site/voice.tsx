@@ -37,7 +37,7 @@ function Waveform() {
       {bars.map((height, index) => (
         <motion.span
           key={index}
-          className="w-1.5 rounded-full bg-cyan-400/80 light:bg-cyan-600/70"
+          className="w-1.5 rounded-full bg-cyan-400/80"
           style={{ height }}
           animate={reduceMotion ? undefined : { scaleY: [1, 0.4, 1] }}
           transition={{
@@ -57,7 +57,7 @@ export function Voice() {
 
   return (
     <section className="relative overflow-hidden py-28">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(700px_circle_at_50%_20%,rgba(34,211,238,0.07),transparent)] light:bg-[radial-gradient(700px_circle_at_50%_20%,rgba(14,116,144,0.06),transparent)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(700px_circle_at_50%_20%,rgba(34,211,238,0.07),transparent)]" />
       <div className="relative mx-auto max-w-6xl px-6">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -66,12 +66,12 @@ export function Voice() {
           transition={{ duration: 0.6 }}
           className="mb-6 text-center"
         >
-          <h2 className="font-display text-4xl font-bold text-cyan-300 light:text-cyan-700 sm:text-6xl">
-            <TypingAnimation duration={80} className="font-display text-4xl font-bold text-cyan-300 light:text-cyan-700 sm:text-6xl">
+          <h2 className="font-display text-4xl font-bold text-cyan-300 sm:text-6xl">
+            <TypingAnimation duration={80} className="font-display text-4xl font-bold text-cyan-300 sm:text-6xl">
               {t("voice.title")}
             </TypingAnimation>
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-slate-400 light:text-slate-600">{t("voice.subtitle")}</p>
+          <p className="mx-auto mt-4 max-w-2xl text-slate-400">{t("voice.subtitle")}</p>
         </motion.div>
 
         <Waveform />
@@ -85,17 +85,17 @@ export function Voice() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.5, delay: index * 0.12 }}
-                className="flex items-start gap-4 rounded-xl border border-slate-800/80 bg-slate-950/50 p-5 light:border-slate-200 light:bg-white light:shadow-sm"
+                className="flex items-start gap-4 rounded-xl border border-slate-800/80 bg-slate-950/50 p-5"
               >
-                <span className="flex h-10 w-10 flex-none items-center justify-center rounded-lg bg-cyan-400/10 text-xl light:bg-cyan-600/10">
+                <span className="flex h-10 w-10 flex-none items-center justify-center rounded-lg bg-cyan-400/10 text-xl">
                   {step.icon}
                 </span>
                 <div>
-                  <p className="font-display font-semibold text-white light:text-slate-900">
-                    <span className="mr-2 text-xs text-cyan-400 light:text-cyan-700">{`0${index + 1}`}</span>
+                  <p className="font-display font-semibold text-white">
+                    <span className="mr-2 text-xs text-cyan-400">{`0${index + 1}`}</span>
                     {t(step.titleKey)}
                   </p>
-                  <p className="mt-1 text-sm text-slate-400 light:text-slate-600">{t(step.descKey)}</p>
+                  <p className="mt-1 text-sm text-slate-400">{t(step.descKey)}</p>
                 </div>
               </motion.div>
             ))}
@@ -106,9 +106,7 @@ export function Voice() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            // The terminal window stays dark in both themes — it reads as an
-            // app screenshot, not as part of the page surface.
-            className="overflow-hidden rounded-xl border border-slate-800 bg-[#0b0f16] font-mono text-[13px] shadow-2xl shadow-cyan-500/5 light:border-slate-300 light:shadow-slate-400/20"
+            className="overflow-hidden rounded-xl border border-slate-800 bg-[#0b0f16] font-mono text-[13px] shadow-2xl shadow-cyan-500/5"
           >
             <div className="flex items-center gap-1.5 border-b border-slate-800/80 px-4 py-3">
               <span className="h-3 w-3 rounded-full bg-[#ff5f57]" />
@@ -140,18 +138,18 @@ export function Voice() {
           transition={{ duration: 0.6 }}
           className="mt-20 text-center"
         >
-          <h3 className="font-display text-2xl font-bold text-white light:text-slate-900 sm:text-3xl">
+          <h3 className="font-display text-2xl font-bold text-white sm:text-3xl">
             {t("voice.how.title")}
           </h3>
-          <div className="mx-auto mt-4 flex max-w-fit flex-wrap items-center justify-center gap-x-2 gap-y-1 rounded-full border border-cyan-400/20 bg-cyan-400/5 px-5 py-2.5 text-sm text-slate-300 light:border-cyan-600/30 light:bg-cyan-600/5 light:text-slate-700">
+          <div className="mx-auto mt-4 flex max-w-fit flex-wrap items-center justify-center gap-x-2 gap-y-1 rounded-full border border-cyan-400/20 bg-cyan-400/5 px-5 py-2.5 text-sm text-slate-300">
             <span>{t("voice.how.join.lead")}</span>
-            <code className="rounded bg-slate-800/80 px-1.5 py-0.5 font-mono text-cyan-300 light:bg-slate-200 light:text-cyan-800">/join</code>
+            <code className="rounded bg-slate-800/80 px-1.5 py-0.5 font-mono text-cyan-300">/join</code>
             <span>{t("voice.how.join.a")}</span>
-            <span className="text-slate-600 light:text-slate-400">·</span>
-            <code className="rounded bg-slate-800/80 px-1.5 py-0.5 font-mono text-cyan-300 light:bg-slate-200 light:text-cyan-800">/leave</code>
+            <span className="text-slate-600">·</span>
+            <code className="rounded bg-slate-800/80 px-1.5 py-0.5 font-mono text-cyan-300">/leave</code>
             <span>{t("voice.how.join.b")}</span>
           </div>
-          <p className="mt-4 text-slate-400 light:text-slate-600">{t("voice.how.subtitle")}</p>
+          <p className="mt-4 text-slate-400">{t("voice.how.subtitle")}</p>
         </motion.div>
 
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -162,16 +160,16 @@ export function Voice() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.5, delay: index * 0.12 }}
-              className="rounded-xl border border-slate-800/80 bg-slate-950/50 p-5 light:border-slate-200 light:bg-white light:shadow-sm"
+              className="rounded-xl border border-slate-800/80 bg-slate-950/50 p-5"
             >
               <div className="flex items-center gap-3">
-                <span className="flex h-10 w-10 flex-none items-center justify-center rounded-lg bg-cyan-400/10 text-xl light:bg-cyan-600/10">
+                <span className="flex h-10 w-10 flex-none items-center justify-center rounded-lg bg-cyan-400/10 text-xl">
                   {tip.icon}
                 </span>
-                <span className="text-xs font-semibold text-cyan-400 light:text-cyan-700">{`0${index + 1}`}</span>
+                <span className="text-xs font-semibold text-cyan-400">{`0${index + 1}`}</span>
               </div>
-              <p className="mt-4 font-display font-semibold text-white light:text-slate-900">{t(tip.titleKey)}</p>
-              <p className="mt-1 text-sm text-slate-400 light:text-slate-600">{t(tip.descKey)}</p>
+              <p className="mt-4 font-display font-semibold text-white">{t(tip.titleKey)}</p>
+              <p className="mt-1 text-sm text-slate-400">{t(tip.descKey)}</p>
             </motion.div>
           ))}
         </div>

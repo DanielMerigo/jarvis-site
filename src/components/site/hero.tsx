@@ -6,12 +6,10 @@ import { AnimatedGridPattern } from "@/components/ui/animated-grid-pattern";
 import { Particles } from "@/components/ui/particles";
 import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { INVITE_JARVIS, useI18n } from "@/lib/i18n";
-import { useTheme } from "@/lib/theme";
 import { cn } from "@/lib/utils";
 
 export function Hero() {
   const { t } = useI18n();
-  const { theme } = useTheme();
   const reduceMotion = useReducedMotion();
   const sectionRef = useRef<HTMLElement>(null);
 
@@ -46,7 +44,7 @@ export function Hero() {
           duration={3}
           className={cn(
             "[mask-image:radial-gradient(600px_circle_at_center,white,transparent)]",
-            "absolute inset-0 fill-cyan-400/10 stroke-cyan-400/10 light:fill-cyan-600/15 light:stroke-cyan-600/15",
+            "absolute inset-0 fill-cyan-400/10 stroke-cyan-400/10",
           )}
         />
         {/* The mouse-follow is the point of this layer, so it has to READ as
@@ -59,7 +57,7 @@ export function Hero() {
           size={0.5}
           staticity={18}
           ease={22}
-          color={theme === "dark" ? "#22d3ee" : "#0e7490"}
+          color="#22d3ee"
         />
       </motion.div>
 
@@ -70,7 +68,7 @@ export function Hero() {
         className="pointer-events-none absolute left-1/2 top-1/2 h-[36rem] w-[36rem] -translate-x-1/2 -translate-y-1/2"
       >
         <motion.div
-          className="h-full w-full rounded-full bg-[radial-gradient(circle,rgba(34,211,238,0.16)_0%,rgba(34,211,238,0.05)_38%,transparent_70%)] light:bg-[radial-gradient(circle,rgba(14,116,144,0.14)_0%,rgba(14,116,144,0.05)_38%,transparent_70%)]"
+          className="h-full w-full rounded-full bg-[radial-gradient(circle,rgba(34,211,238,0.16)_0%,rgba(34,211,238,0.05)_38%,transparent_70%)]"
           animate={reduceMotion ? undefined : { scale: [1, 1.06, 1], opacity: [0.8, 1, 0.8] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
         />
@@ -83,19 +81,19 @@ export function Hero() {
         style={{ y: contentY, opacity: contentOpacity }}
         className="relative z-10 flex flex-col items-center gap-6"
       >
-        <span className="rounded-full border border-cyan-400/30 bg-cyan-400/10 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-cyan-200 light:border-cyan-600/40 light:bg-cyan-600/10 light:text-cyan-800">
+        <span className="rounded-full border border-cyan-400/30 bg-cyan-400/10 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-cyan-200">
           {t("hero.badge")}
         </span>
 
-        <h1 className="font-display max-w-4xl text-5xl font-bold leading-[1.05] tracking-tight text-white light:text-slate-900 sm:text-7xl">
+        <h1 className="font-display max-w-4xl text-5xl font-bold leading-[1.05] tracking-tight text-white sm:text-7xl">
           {t("hero.title.1")}
           <br />
-          <span className="bg-gradient-to-r from-cyan-300 via-sky-400 to-cyan-300 bg-clip-text text-transparent light:from-cyan-600 light:via-sky-600 light:to-cyan-600">
+          <span className="bg-gradient-to-r from-cyan-300 via-sky-400 to-cyan-300 bg-clip-text text-transparent">
             {t("hero.title.2")}
           </span>
         </h1>
 
-        <p className="max-w-2xl text-balance text-base text-slate-300/90 light:text-slate-600 sm:text-lg">
+        <p className="max-w-2xl text-balance text-base text-slate-300/90 sm:text-lg">
           {t("hero.subtitle")}
         </p>
 
@@ -111,7 +109,7 @@ export function Hero() {
           </a>
           <a
             href="#install"
-            className="rounded-full border border-slate-600/60 px-8 py-3 text-base font-medium text-slate-200 transition-colors hover:border-cyan-400/50 hover:text-cyan-200 light:border-slate-400/60 light:text-slate-700 light:hover:border-cyan-600/60 light:hover:text-cyan-700"
+            className="rounded-full border border-slate-600/60 px-8 py-3 text-base font-medium text-slate-200 transition-colors hover:border-cyan-400/50 hover:text-cyan-200"
           >
             {t("hero.cta.how")}
           </a>

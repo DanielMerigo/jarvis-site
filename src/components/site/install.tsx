@@ -35,10 +35,10 @@ export function Install() {
         transition={{ duration: 0.6 }}
         className="mb-12 text-center"
       >
-        <h2 className="font-display text-3xl font-bold text-white light:text-slate-900 sm:text-5xl">
+        <h2 className="font-display text-3xl font-bold text-white sm:text-5xl">
           {t("install.title")}
         </h2>
-        <p className="mt-3 text-slate-400 light:text-slate-600">{t("install.subtitle")}</p>
+        <p className="mt-3 text-slate-400">{t("install.subtitle")}</p>
       </motion.div>
 
       <div className="grid gap-6 sm:grid-cols-2">
@@ -49,16 +49,16 @@ export function Install() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.6, delay: index * 0.15 }}
-            className="relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-950/60 p-8 light:border-slate-200 light:bg-white light:shadow-sm"
+            className="relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-950/60 p-8"
           >
             {card.primary && <BorderBeam size={140} duration={8} colorFrom="#22d3ee" colorTo="#0ea5e9" />}
-            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-400 light:text-cyan-700">
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-400">
               {t(card.stepKey)}
             </span>
-            <h3 className="font-display mt-3 text-2xl font-semibold text-white light:text-slate-900">
+            <h3 className="font-display mt-3 text-2xl font-semibold text-white">
               {t(card.titleKey)}
             </h3>
-            <p className="mt-3 min-h-16 text-sm leading-relaxed text-slate-400 light:text-slate-600">
+            <p className="mt-3 min-h-16 text-sm leading-relaxed text-slate-400">
               {t(card.descKey)}
             </p>
             <a
@@ -67,8 +67,8 @@ export function Install() {
               rel="noreferrer"
               className={
                 card.primary
-                  ? "mt-6 inline-block rounded-full bg-cyan-400 px-6 py-2.5 text-sm font-semibold text-slate-950 transition hover:bg-cyan-300 light:bg-cyan-600 light:text-white light:hover:bg-cyan-500"
-                  : "mt-6 inline-block rounded-full border border-cyan-400/40 px-6 py-2.5 text-sm font-semibold text-cyan-200 transition hover:bg-cyan-400/10 light:border-cyan-600/50 light:text-cyan-700 light:hover:bg-cyan-600/10"
+                  ? "mt-6 inline-block rounded-full bg-cyan-400 px-6 py-2.5 text-sm font-semibold text-slate-950 transition hover:bg-cyan-300"
+                  : "mt-6 inline-block rounded-full border border-cyan-400/40 px-6 py-2.5 text-sm font-semibold text-cyan-200 transition hover:bg-cyan-400/10"
               }
             >
               {t(card.ctaKey)}

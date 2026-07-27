@@ -44,10 +44,10 @@ export function Commands() {
         transition={{ duration: 0.6 }}
         className="mb-12 px-6 text-center"
       >
-        <h2 className="font-display text-3xl font-bold text-white light:text-slate-900 sm:text-5xl">
+        <h2 className="font-display text-3xl font-bold text-white sm:text-5xl">
           {t("commands.title")}
         </h2>
-        <p className="mx-auto mt-4 max-w-2xl text-slate-400 light:text-slate-600">{t("commands.subtitle")}</p>
+        <p className="mx-auto mt-4 max-w-2xl text-slate-400">{t("commands.subtitle")}</p>
       </motion.div>
 
       <div className="relative flex flex-col gap-4 [mask-image:linear-gradient(to_right,transparent,white_10%,white_90%,transparent)]">
@@ -55,7 +55,7 @@ export function Commands() {
           {slashCommands.map((command) => (
             <span
               key={command}
-              className="mx-2 rounded-lg border border-slate-700/70 bg-slate-900/80 px-4 py-2 font-mono text-sm text-cyan-200 light:border-slate-300 light:bg-white light:text-cyan-800"
+              className="mx-2 rounded-lg border border-slate-700/70 bg-slate-900/80 px-4 py-2 font-mono text-sm text-cyan-200"
             >
               {command}
             </span>
@@ -65,7 +65,7 @@ export function Commands() {
           {voicePhrases.map((phrase) => (
             <span
               key={phrase}
-              className="mx-2 rounded-full border border-cyan-400/25 bg-cyan-400/5 px-4 py-2 text-sm italic text-slate-300 light:border-cyan-600/30 light:text-slate-600"
+              className="mx-2 rounded-full border border-cyan-400/25 bg-cyan-400/5 px-4 py-2 text-sm italic text-slate-300"
             >
               🎙️ {phrase}
             </span>

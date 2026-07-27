@@ -7,15 +7,13 @@ export function LanguageToggle() {
   const { lang, setLang } = useI18n();
 
   return (
-    <div className="flex items-center gap-1 rounded-full border border-cyan-400/20 bg-black/40 p-1 text-xs font-medium backdrop-blur light:border-cyan-600/30 light:bg-white/70">
+    <div className="flex items-center gap-1 rounded-full border border-cyan-400/20 bg-black/40 p-1 text-xs font-medium backdrop-blur">
       {(["pt", "en"] as const).map((option) => (
         <button
           key={option}
           onClick={() => setLang(option)}
           className={`relative rounded-full px-3 py-1 uppercase tracking-wider transition-colors ${
-            lang === option
-              ? "text-slate-950 light:text-white"
-              : "text-cyan-100/60 hover:text-cyan-100 light:text-cyan-900/50 light:hover:text-cyan-900"
+            lang === option ? "text-slate-950" : "text-cyan-100/60 hover:text-cyan-100"
           }`}
           aria-pressed={lang === option}
         >
@@ -23,7 +21,7 @@ export function LanguageToggle() {
           {lang === option && (
             <motion.span
               layoutId="lang-active-pill"
-              className="absolute inset-0 rounded-full bg-cyan-400/90 light:bg-cyan-600"
+              className="absolute inset-0 rounded-full bg-cyan-400/90"
               transition={{ type: "spring", stiffness: 500, damping: 35 }}
             />
           )}
