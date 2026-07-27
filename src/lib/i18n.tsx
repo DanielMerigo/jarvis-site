@@ -47,6 +47,19 @@ const dictionaries = {
     "voice.s3.desc": "regex + LLM local entendem o que você quis",
     "voice.s4.title": "Ação",
     "voice.s4.desc": "o player executa: toca, pula, pausa, volume",
+    "voice.how.title": "Como falar com ele",
+    "voice.how.subtitle": "Quatro hábitos para acertar de primeira:",
+    "voice.how.t1.title": "Emende o chamado",
+    "voice.how.t1.desc":
+      '"hey jarvis" rápido, como uma palavra só — devagar e articulado piora a detecção.',
+    "voice.how.t2.title": "Espere o bipe",
+    "voice.how.t2.desc": "O 👂 confirma que ele acordou. Você tem 4s para começar o comando.",
+    "voice.how.t3.title": "Pause 1,5s no final",
+    "voice.how.t3.desc":
+      'É o silêncio que fecha o comando — emendar conversa no "toca…" entra junto na busca.',
+    "voice.how.t4.title": "Depois, fale à vontade",
+    "voice.how.t4.desc":
+      'Sem um novo "hey jarvis", nada é ouvido nem processado — conversa nunca vira comando.',
     "commands.title": "Comandos para tudo",
     "commands.subtitle": "Slash commands no chat, frases naturais na voz — em português e inglês.",
     "install.title": "Instale no seu servidor",
@@ -110,6 +123,19 @@ const dictionaries = {
     "voice.s3.desc": "regex + local LLM figure out what you meant",
     "voice.s4.title": "Action",
     "voice.s4.desc": "the player executes: play, skip, pause, volume",
+    "voice.how.title": "How to talk to it",
+    "voice.how.subtitle": "Four habits to nail it on the first try:",
+    "voice.how.t1.title": "Run the call together",
+    "voice.how.t1.desc":
+      '"hey jarvis" fast, like a single word — slow and over-articulated hurts detection.',
+    "voice.how.t2.title": "Wait for the beep",
+    "voice.how.t2.desc": "The 👂 confirms it woke up. You have 4s to start your command.",
+    "voice.how.t3.title": "Pause 1.5s at the end",
+    "voice.how.t3.desc":
+      'Silence is what closes the command — chatting right after "play…" leaks into the search.',
+    "voice.how.t4.title": "Then talk freely",
+    "voice.how.t4.desc":
+      'Without a new "hey jarvis", nothing is heard or processed — chatter never becomes a command.',
     "commands.title": "Commands for everything",
     "commands.subtitle": "Slash commands in chat, natural phrases by voice — Portuguese and English.",
     "install.title": "Install it on your server",

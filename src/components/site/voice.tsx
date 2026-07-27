@@ -11,6 +11,13 @@ const steps: Array<{ titleKey: TranslationKey; descKey: TranslationKey; icon: st
   { titleKey: "voice.s4.title", descKey: "voice.s4.desc", icon: "🎵" },
 ];
 
+const howTips: Array<{ titleKey: TranslationKey; descKey: TranslationKey; icon: string }> = [
+  { titleKey: "voice.how.t1.title", descKey: "voice.how.t1.desc", icon: "⚡" },
+  { titleKey: "voice.how.t2.title", descKey: "voice.how.t2.desc", icon: "🔔" },
+  { titleKey: "voice.how.t3.title", descKey: "voice.how.t3.desc", icon: "🤫" },
+  { titleKey: "voice.how.t4.title", descKey: "voice.how.t4.desc", icon: "💬" },
+];
+
 const terminalLines = [
   { text: "[ears] speaking start, subscribed user=merigo", color: "text-slate-500" },
   { text: "[ears] near-wake score=0.412", color: "text-slate-500" },
@@ -122,6 +129,41 @@ export function Voice() {
               ))}
             </div>
           </motion.div>
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.6 }}
+          className="mt-20 text-center"
+        >
+          <h3 className="font-display text-2xl font-bold text-white sm:text-3xl">
+            {t("voice.how.title")}
+          </h3>
+          <p className="mt-2 text-slate-400">{t("voice.how.subtitle")}</p>
+        </motion.div>
+
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {howTips.map((tip, index) => (
+            <motion.div
+              key={tip.titleKey}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.5, delay: index * 0.12 }}
+              className="rounded-xl border border-slate-800/80 bg-slate-950/50 p-5"
+            >
+              <div className="flex items-center gap-3">
+                <span className="flex h-10 w-10 flex-none items-center justify-center rounded-lg bg-cyan-400/10 text-xl">
+                  {tip.icon}
+                </span>
+                <span className="text-xs font-semibold text-cyan-400">{`0${index + 1}`}</span>
+              </div>
+              <p className="mt-4 font-display font-semibold text-white">{t(tip.titleKey)}</p>
+              <p className="mt-1 text-sm text-slate-400">{t(tip.descKey)}</p>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
