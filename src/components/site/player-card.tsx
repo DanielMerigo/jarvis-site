@@ -3,6 +3,10 @@
 import Image from "next/image";
 import { motion, useReducedMotion } from "motion/react";
 
+// next/image with `unoptimized` does NOT prepend basePath to the src —
+// on GitHub Pages the site lives under /jarvis-site, so we prefix manually.
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 const controls = [
   { icon: "jarvis_restart", label: "Restart", style: "secondary" },
   { icon: "jarvis_pause", label: "Pause", style: "primary" },
@@ -70,7 +74,7 @@ export function PlayerCard() {
               key={control.label}
               className={`flex cursor-default items-center gap-1.5 rounded-md px-2.5 py-1.5 text-xs font-medium text-white transition-colors ${buttonStyles[control.style]}`}
             >
-              <Image src={`/emojis/${control.icon}.png`} alt="" width={18} height={18} />
+              <Image src={`${BASE_PATH}/emojis/${control.icon}.png`} alt="" width={18} height={18} />
               {control.label}
             </span>
           ))}
@@ -81,7 +85,7 @@ export function PlayerCard() {
               key={control.label}
               className="flex cursor-default items-center gap-1.5 rounded-md bg-[#4e5058] px-2.5 py-1.5 text-xs font-medium text-white"
             >
-              <Image src={`/emojis/${control.icon}.png`} alt="" width={18} height={18} />
+              <Image src={`${BASE_PATH}/emojis/${control.icon}.png`} alt="" width={18} height={18} />
               {control.label}
             </span>
           ))}
